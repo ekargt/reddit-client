@@ -1,16 +1,30 @@
-# React + Vite
+## Wireframes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Wireframes](./docs/redditClientWireframe.png)
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React
+- Redux Toolkit
+- React Router
+- Vite
+- Jest & React Testing Library
+- CSS
+- RapidAPI (Reddit API)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Browse popular posts and subreddits
+- Search for posts
+- View post details and comments
+- Responsive design
+- Loading and error states
+- Redux state management
+- Tested with Jest and React Testing Library
 
-## Expanding the ESLint configuration
+## Future Work
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- User authentication
+- Voting, saving, and sharing posts
+- Infinite scrolling
+- Advanced search and filtering
