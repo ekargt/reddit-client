@@ -1,0 +1,504 @@
+.post-card {
+    width: 100%;
+    max-width: none;
+    min-height: 370px;
+
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 26, 38, 0.98),
+            rgba(10, 14, 22, 0.98)
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    color: #f5f7fb;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+
+    font-family:
+        Inter,
+        "SF Pro Display",
+        system-ui,
+        sans-serif;
+}
+
+
+/* ---------- DESKTOP HOVER ---------- */
+
+@media (hover: hover) {
+
+    .post-card:hover {
+        transform: translateY(-5px);
+
+        border-color:
+            rgba(255, 255, 255, 0.16);
+
+        box-shadow:
+            0 25px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .post-card:hover .post-image {
+        transform: scale(1.025);
+    }
+}
+
+
+/* ---------- HEADER ---------- */
+
+.post-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+
+    min-height: 28px;
+}
+
+.post-subreddit {
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    color: #ff7043;
+
+    background:
+        rgba(255, 87, 34, 0.12);
+
+    padding: 0.35rem 0.7rem;
+
+    border-radius: 999px;
+
+    max-width: 100%;
+
+    overflow-wrap: anywhere;
+}
+
+.post-time {
+    color: #8993a4;
+    font-size: 0.8rem;
+
+    white-space: nowrap;
+}
+
+
+/* ---------- BODY ---------- */
+
+.post-body {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: stretch;
+
+    gap: 1rem;
+
+    flex: 1;
+
+    margin-top: 0.7rem;
+
+    min-width: 0;
+}
+
+
+/* ---------- TEXT SIDE ---------- */
+
+.post-text {
+    width: 50%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-title {
+    margin: 0;
+
+    font-size: 1.45rem;
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    letter-spacing: -0.035em;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+
+    overflow-wrap: anywhere;
+}
+
+.post-excerpt {
+    margin: 0.7rem 0;
+
+    color: #a5adba;
+
+    font-size: 0.95rem;
+    line-height: 1.5;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ---------- META ---------- */
+
+.post-meta {
+    margin-top: auto;
+
+    min-width: 0;
+}
+
+.post-footer {
+    color: #c7ced9;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    margin-bottom: 0.6rem;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ---------- STATS ---------- */
+
+.post-stats {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+}
+
+.post-stats span {
+    padding: 0.4rem 0.8rem;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    color: #c3cad5;
+
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.post-stats span:first-child {
+    color: #ff5733;
+}
+
+
+/* ---------- IMAGE ---------- */
+
+.post-image {
+    width: 48%;
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    background:
+        rgba(0, 0, 0, 0.25);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35);
+
+    flex-shrink: 0;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+/* ---------- IMAGE TYPES ---------- */
+
+.post-image.portrait {
+    object-fit: contain;
+    padding: 0.4rem;
+}
+
+.post-image.landscape {
+    object-fit: cover;
+}
+
+.post-image.square {
+    object-fit: cover;
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+
+    .post-card {
+        min-height: 330px;
+
+        padding: 0.9rem;
+
+        border-radius: 20px;
+    }
+
+    .post-body {
+        gap: 0.8rem;
+    }
+
+    .post-title {
+        font-size: 1.25rem;
+    }
+
+    .post-excerpt {
+        font-size: 0.9rem;
+    }
+
+    .post-image {
+        height: 210px;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 650px) {
+
+    .post-card {
+        min-height: auto;
+
+        padding: 0.85rem;
+
+        border-radius: 18px;
+    }
+
+    .post-body {
+        flex-direction: column;
+
+        gap: 0.8rem;
+    }
+
+    .post-text {
+        width: 100%;
+    }
+
+    /*
+       Put the image first on mobile so
+       the visual content appears before
+       the longer text.
+    */
+    .post-image {
+        order: -1;
+
+        width: 100%;
+        height: 220px;
+
+        border-radius: 16px;
+    }
+
+    .post-title {
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+
+    .post-excerpt {
+        font-size: 0.88rem;
+
+        -webkit-line-clamp: 4;
+    }
+
+    .post-footer {
+        font-size: 0.8rem;
+    }
+
+    .post-stats span {
+        font-size: 0.75rem;
+
+        padding: 0.35rem 0.7rem;
+    }
+}
+
+
+/* ---------- SMALL PHONES ---------- */
+
+@media (max-width: 420px) {
+
+    .post-card {
+        padding: 0.7rem;
+
+        border-radius: 16px;
+    }
+
+    .post-header {
+        gap: 0.35rem;
+    }
+
+    .post-subreddit {
+        font-size: 0.75rem;
+
+        padding: 0.3rem 0.55rem;
+    }
+
+    .post-time {
+        font-size: 0.72rem;
+    }
+
+    .post-image {
+        height: 190px;
+
+        border-radius: 14px;
+    }
+
+    .post-title {
+        font-size: 1.05rem;
+    }
+
+    .post-excerpt {
+        font-size: 0.84rem;
+        line-height: 1.45;
+    }
+
+    .post-stats {
+        gap: 0.35rem;
+    }
+
+    .post-stats span {
+        padding: 0.3rem 0.55rem;
+
+        font-size: 0.7rem;
+    }
+}
+
+
+/* ---------- POST SKELETON ---------- */
+
+.skeleton-card {
+    pointer-events: none;
+}
+
+.skeleton-pill,
+.skeleton-time,
+.skeleton-title,
+.skeleton-line,
+.skeleton-author,
+.skeleton-stat,
+.skeleton-image {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.05) 25%,
+        rgba(255, 255, 255, 0.12) 50%,
+        rgba(255, 255, 255, 0.05) 75%
+    );
+
+    background-size: 300% 100%;
+
+    animation: shimmer 1.4s linear infinite;
+}
+
+.skeleton-pill {
+    width: 90px;
+    height: 28px;
+
+    border-radius: 999px;
+}
+
+.skeleton-time {
+    width: 70px;
+    height: 16px;
+
+    border-radius: 8px;
+}
+
+.skeleton-title {
+    width: 95%;
+    height: 24px;
+
+    border-radius: 8px;
+
+    margin-bottom: 0.8rem;
+}
+
+.skeleton-title.short {
+    width: 70%;
+}
+
+.skeleton-line {
+    width: 100%;
+    height: 14px;
+
+    border-radius: 6px;
+
+    margin-bottom: 0.6rem;
+}
+
+.skeleton-line.short {
+    width: 60%;
+}
+
+.skeleton-author {
+    width: 120px;
+    height: 16px;
+
+    border-radius: 8px;
+
+    margin-bottom: 0.8rem;
+}
+
+.skeleton-stat {
+    width: 70px;
+    height: 30px;
+
+    border-radius: 999px;
+}
+
+.skeleton-image {
+    width: 48%;
+    height: 230px;
+
+    border-radius: 20px;
+
+    flex-shrink: 0;
+}
+
+@keyframes shimmer {
+    from {
+        background-position: 100% 0;
+    }
+
+    to {
+        background-position: -100% 0;
+    }
+}

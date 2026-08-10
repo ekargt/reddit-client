@@ -1,0 +1,173 @@
+.comment {
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-bottom: 1rem;
+    padding: 1rem 1.2rem;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20, 26, 38, 0.95),
+            rgba(10, 14, 22, 0.95)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+
+    color: #f5f7fb;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.comment:hover {
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(255, 255, 255, 0.15);
+}
+
+/* AUTHOR + SCORE */
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+
+    margin-bottom: 0.7rem;
+}
+
+.comment-author {
+    margin: 0;
+
+    color: #ff7043;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+.comment-score {
+    margin: 0;
+
+    padding: 0.25rem 0.65rem;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    color: #c5ccd8;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+/* COMMENT TEXT */
+
+.comment-body {
+    margin: 0;
+
+    color: #e2e8f0;
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 480px) {
+
+    .comment {
+        padding: 0.85rem 0.9rem;
+        border-radius: 14px;
+    }
+
+    .comment-header {
+        gap: 0.5rem;
+        margin-bottom: 0.55rem;
+    }
+
+    .comment-author {
+        font-size: 0.82rem;
+    }
+
+    .comment-score {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.55rem;
+    }
+
+    .comment-body {
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+
+}
+
+/* ---------- SKELETON ---------- */
+
+.comment-skeleton {
+    pointer-events: none;
+}
+
+.skeleton-author,
+.skeleton-score,
+.skeleton-line {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.05) 25%,
+        rgba(255, 255, 255, 0.12) 50%,
+        rgba(255, 255, 255, 0.05) 75%
+    );
+
+    background-size: 300% 100%;
+    animation: shimmer 1.4s linear infinite;
+}
+
+.skeleton-author {
+    width: 120px;
+    height: 16px;
+    border-radius: 8px;
+}
+
+.skeleton-score {
+    width: 60px;
+    height: 28px;
+    border-radius: 999px;
+}
+
+.skeleton-line {
+    height: 14px;
+    width: 100%;
+    margin-bottom: 0.7rem;
+    border-radius: 6px;
+}
+
+.skeleton-line.short {
+    width: 65%;
+}
+
+@keyframes shimmer {
+    from {
+        background-position: 100% 0;
+    }
+
+    to {
+        background-position: -100% 0;
+    }
+}

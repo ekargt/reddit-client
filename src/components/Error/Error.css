@@ -1,0 +1,177 @@
+.error-card {
+    width: min(90%, 540px);
+
+    min-height: 280px;
+
+    margin: 4rem auto;
+    padding: 2.25rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    box-sizing: border-box;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 26, 38, 0.98),
+            rgba(10, 14, 22, 0.98)
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35);
+
+    color: #f5f7fb;
+
+    font-family:
+        Inter,
+        "SF Pro Display",
+        system-ui,
+        sans-serif;
+
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.error-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.error-icon {
+    font-size: 3.5rem;
+    line-height: 1;
+
+    filter:
+        drop-shadow(0 0 12px rgba(255, 69, 0, 0.35));
+}
+
+.error-title {
+    margin: 0;
+
+    font-size: 1.8rem;
+    font-weight: 800;
+
+    letter-spacing: -0.03em;
+}
+
+.error-message {
+    margin: 0;
+
+    max-width: 420px;
+
+    color: #a5adba;
+
+    font-size: 1rem;
+    line-height: 1.7;
+
+    overflow-wrap: anywhere;
+}
+
+.retry-button {
+    margin-top: 0.75rem;
+
+    padding: 0.95rem 1.8rem;
+
+    border: none;
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff6a3d,
+            #ff4500
+        );
+
+    box-shadow:
+        0 10px 25px rgba(255, 69, 0, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.retry-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 35px rgba(255, 69, 0, 0.4);
+}
+
+.retry-button:active {
+    transform: translateY(0);
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 650px) {
+
+    .error-card {
+        width: calc(100% - 2rem);
+
+        min-height: 240px;
+
+        margin: 2rem auto;
+
+        padding: 1.5rem;
+    }
+
+    .error-icon {
+        font-size: 3rem;
+    }
+
+    .error-title {
+        font-size: 1.5rem;
+    }
+
+    .error-message {
+        font-size: 0.9rem;
+        line-height: 1.55;
+    }
+
+    .retry-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ---------- SMALL PHONES ---------- */
+
+@media (max-width: 380px) {
+
+    .error-card {
+        width: calc(100% - 1.25rem);
+        padding: 1.25rem;
+        border-radius: 18px;
+    }
+
+    .error-title {
+        font-size: 1.3rem;
+    }
+
+    .error-message {
+        font-size: 0.85rem;
+    }
+}

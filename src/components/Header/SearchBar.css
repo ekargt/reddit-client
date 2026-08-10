@@ -1,0 +1,215 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+
+    width: 100%;
+    max-width: 560px;
+}
+
+
+/* ---------- SEARCH BOX ---------- */
+
+.search-wrapper {
+    position: relative;
+
+    width: 430px;
+    flex: 1;
+    min-width: 0;
+}
+
+.search-icon {
+    position: absolute;
+
+    left: 18px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #8892a5;
+    font-size: 0.95rem;
+
+    pointer-events: none;
+}
+
+.search-input {
+    width: 100%;
+    height: 48px;
+
+    box-sizing: border-box;
+
+    padding: 0 18px 0 48px;
+
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: #f5f7fb;
+
+    font-size: 0.95rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.search-input::placeholder {
+    color: #7d8797;
+}
+
+.search-input:focus {
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    border-color:
+        #ff6a33;
+
+    box-shadow:
+        0 0 0 4px rgba(255, 106, 51, 0.15);
+}
+
+
+/* ---------- BUTTON ---------- */
+
+.search-button {
+    flex-shrink: 0;
+
+    height: 48px;
+
+    padding: 0 1.4rem;
+
+    border: none;
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4500,
+            #ff6a33
+        );
+
+    color: white;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* ---------- DESKTOP HOVER ---------- */
+
+@media (hover: hover) {
+
+    .search-button:hover {
+        transform: translateY(-2px);
+
+        filter: brightness(1.08);
+
+        box-shadow:
+            0 10px 20px rgba(255, 69, 0, 0.35);
+    }
+}
+
+.search-button:active {
+    transform: translateY(0);
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+
+    .search-bar {
+        max-width: 450px;
+    }
+
+    .search-wrapper {
+        width: 300px;
+    }
+
+    .search-input {
+        height: 44px;
+    }
+
+    .search-button {
+        height: 44px;
+        padding: 0 1.1rem;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 650px) {
+
+    .search-bar {
+        max-width: none;
+        gap: 0.5rem;
+    }
+
+    .search-wrapper {
+        width: auto;
+    }
+
+    .search-input {
+        height: 42px;
+
+        padding-left: 42px;
+
+        font-size: 0.88rem;
+    }
+
+    .search-icon {
+        left: 15px;
+    }
+
+    .search-button {
+        height: 42px;
+
+        padding: 0 1rem;
+
+        font-size: 0.82rem;
+    }
+}
+
+
+/* ---------- SMALL PHONES ---------- */
+
+@media (max-width: 420px) {
+
+    .search-bar {
+        gap: 0.4rem;
+    }
+
+    .search-input {
+        height: 40px;
+
+        padding-left: 38px;
+
+        font-size: 0.82rem;
+    }
+
+    .search-icon {
+        left: 13px;
+        font-size: 0.85rem;
+    }
+
+    .search-button {
+        height: 40px;
+
+        padding: 0 0.8rem;
+
+        font-size: 0.78rem;
+    }
+}
