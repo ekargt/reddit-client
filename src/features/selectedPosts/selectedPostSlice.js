@@ -8,7 +8,7 @@ const findCommentsByPost=createAsyncThunk(
         const response = await fetch(`https://reddit34.p.rapidapi.com/getPostComments?post_url=${encodedUrl}`,{
             method: 'GET',
             headers: {
-                'x-rapidapi-key': '1666f45ecdmshb5c3224c75ab443p10bf78jsn8a650b67c8c6',
+                'x-rapidapi-key': 'f2abb8b2b8mshc534215672ecc96p1ffb47jsna98e134d1f92',
                 'x-rapidapi-host': 'reddit34.p.rapidapi.com',
                 'Content-Type': 'application/json'
 	}})

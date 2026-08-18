@@ -6,7 +6,7 @@ const searchRedditByTerm=createAsyncThunk(
         const response=await fetch(`https://reddit34.p.rapidapi.com/getSearchPosts?query=${arg}`,{
 	method: 'GET',
 	headers: {
-		'x-rapidapi-key': '1666f45ecdmshb5c3224c75ab443p10bf78jsn8a650b67c8c6',
+		'x-rapidapi-key': 'f2abb8b2b8mshc534215672ecc96p1ffb47jsna98e134d1f92',
 		'x-rapidapi-host': 'reddit34.p.rapidapi.com',
 		'Content-Type': 'application/json'
 	}})
@@ -21,7 +21,7 @@ const searchPopularPosts=createAsyncThunk(
         const response=await fetch('https://reddit34.p.rapidapi.com/getPopularPosts?sort=new',{
 	method: 'GET',
 	headers: {
-		'x-rapidapi-key': '1666f45ecdmshb5c3224c75ab443p10bf78jsn8a650b67c8c6',
+		'x-rapidapi-key': 'f2abb8b2b8mshc534215672ecc96p1ffb47jsna98e134d1f92',
 		'x-rapidapi-host': 'reddit34.p.rapidapi.com',
 		'Content-Type': 'application/json'
 	}
@@ -36,7 +36,7 @@ const searchPostsBySubreddit=createAsyncThunk("popularSubreddits/searchPostsBySu
         const response=await fetch(`https://reddit34.p.rapidapi.com/getTopPostsBySubreddit?subreddit=${arg}&time=year`,{
         method: 'GET',
         headers: {
-            'x-rapidapi-key': '1666f45ecdmshb5c3224c75ab443p10bf78jsn8a650b67c8c6',
+            'x-rapidapi-key': 'f2abb8b2b8mshc534215672ecc96p1ffb47jsna98e134d1f92',
             'x-rapidapi-host': 'reddit34.p.rapidapi.com',
             'Content-Type': 'application/json'
         }

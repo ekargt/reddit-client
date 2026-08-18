@@ -19,11 +19,20 @@ function PostDetail(){
     const error=useSelector(selectCommentsError)
 
     useEffect(() => {
-        if (post) {
+        if (post.data) {
             dispatch(findCommentsByPost(post.data.permalink));
         }
     }, [dispatch, post]);
     
+    if (!post.data) {
+    return (
+        <Error
+            message="This post is no longer available. Please click retry to return to the home page."
+            onRetry={() => navigate("/")}
+        />
+    );
+}
+
     if (error){
         return <Error message="Couldn't load the comments" onRetry={()=>dispatch(findCommentsByPost(post.data.permalink))}/>
     }
